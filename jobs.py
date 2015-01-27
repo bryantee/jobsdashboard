@@ -7,4 +7,9 @@ class Jobs():
 		self.zipcode = zipcode
 		self.job_name = ''.join([i for i in address if not i.isdigit()])
 		self.job_name = self.job_name[1:]
+		self.phase = {}
+
+	def add_phase(self, trade, vendor):
+		self.phase[trade] = vendor
+
 
