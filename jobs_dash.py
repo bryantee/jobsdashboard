@@ -9,3 +9,5 @@ for i in jobDict[fake_street.job_name]:
 
 fake_street.add_phase('paint', 'Arturo')
 print(fake_street.phase)
+fake_street.add_phase('cleaning', 'Addrienne')
+print(fake_street.phase)
