@@ -21,11 +21,12 @@ open_jobs = []
 def addOpenedJob(job):
 	open_jobs.append(job)
 
-addOpenedJob(fake_street.job_name)
-addOpenedJob(fake_street2.job_name)
+addOpenedJob(fake_street)
+addOpenedJob(fake_street2)
 
 print("jobs that are currently open: \n")
 
 for job in open_jobs:
-	print(job)
+	print(job.address)
+	print("Due: " + str(job.due))
 
