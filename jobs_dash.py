@@ -27,6 +27,11 @@ def showOpenJobs():
 			print(' - %s:' % i)
 			print(job.phase[i] + '\n')
 
+def openJobCount():
+	return len(jobs.Jobs.open_jobs)
+
+openJobCount()
+
 
 
 
