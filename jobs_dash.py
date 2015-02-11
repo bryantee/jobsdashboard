@@ -8,16 +8,25 @@ fake_street3 = jobs.Jobs("9999 yeah yeah yeahs", "2-17-15")
 
 
 # Adding some phases to the jobs for testing
+# Job 1
 fake_street.add_phase('paint', 'Arturo')
 fake_street.add_phase('cleaning', 'Addrienne')
 fake_street.add_phase('flooring', 'star flooring')
+# Job 2
+fake_street2.add_phase('paint', 'Ramsey Painting')
+fake_street2.add_phase('Cleaning', 'La Maids')
+# Job 3
+fake_street3.add_phase('Repairs', 'Magna Building')
 
 
-# Testing prints to 
+# Testing prints of job, due date and phases
 for job in jobs.Jobs.open_jobs:
 	print(job.address + ' is due ' + job.due)
+	for i in job.phase:
+		print(' - %s:' % i)
+		print(job.phase[i] + '\n')
 
-# Testing __str__  
+# Testing __str__ method
 print(fake_street)
 
 
