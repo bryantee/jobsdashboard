@@ -17,3 +17,8 @@ fake_street.add_phase('flooring', 'star flooring')
 for job in jobs.Jobs.open_jobs:
 	print(job.address + ' is due ' + job.due)
 
+# Testing __str__  
+print(fake_street)
+
+
+
