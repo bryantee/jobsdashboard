@@ -19,15 +19,17 @@ fake_street2.add_phase('Cleaning', 'La Maids')
 fake_street3.add_phase('Repairs', 'Magna Building')
 
 
-# Testing prints of job, due date and phases
-for job in jobs.Jobs.open_jobs:
-	print(job.address + ' is due ' + job.due)
-	for i in job.phase:
-		print(' - %s:' % i)
-		print(job.phase[i] + '\n')
+# Testing method for printing jobs, due date and phases
+def showOpenJobs():
+	for job in jobs.Jobs.open_jobs:
+		print(job.address + ' is due ' + job.due)
+		for i in job.phase:
+			print(' - %s:' % i)
+			print(job.phase[i] + '\n')
 
-# Testing __str__ method
-print(fake_street)
+
+
+
 
 
 
