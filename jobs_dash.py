@@ -29,9 +29,15 @@ def showOpenJobs():
 
 # test out showing number of open jobs
 def openJobCount():
-	return len(jobs.Jobs.open_jobs)
+	print('Number of open jobs: ', len(jobs.Jobs.open_jobs))
 
-print('Number of open jobs: ', openJobCount())
+# method to remove job from open_jobs[]
+def closeJob(job):
+	jobs.Jobs.closed_jobs.append(job)
+	jobs.Jobs.open_jobs.remove(job)
+
+
+
 
 
 

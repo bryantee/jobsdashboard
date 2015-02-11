@@ -2,6 +2,7 @@
 class Jobs():
 	
 	open_jobs = []
+	closed_jobs = []
 
 	def __init__(self, address, due):
 		self.address = address
