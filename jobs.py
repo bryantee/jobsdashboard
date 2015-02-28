@@ -1,21 +1,26 @@
 
+
 class Jobs():
-	
-	open_jobs = []
-	closed_jobs = []
+    
+    open_jobs = []
+    closed_jobs = []
 
-	def __init__(self, address, due):
-		self.address = address
-		Jobs.open_jobs.append(self)
-		self.due = due
-		self.phase = {}
-	def __str__(self):
-		return self.address
+    def __init__(self, address, due):
+        self.address = address
+        Jobs.open_jobs.append(self)
+        self.due = due   # Due date
+        self.phase = {}
+    def __str__(self):
+        return self.address
 
-	def add_phase(self, trade, vendor):
-		self.phase[trade] = vendor
+    def add_phase(self, trade, vendor):
+        self.phase[trade] = vendor
 
-	@classmethod
-	def current_jobs(cls):
-		print(open_jobs)
+    def close_job(self):
+        Jobs.open_jobs.remove(self)
+        Jobs.closed_jobs.append(self)
+
+    @classmethod
+    def current_jobs(cls):
+        print(open_jobs)
 
