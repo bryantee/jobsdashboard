@@ -5,10 +5,11 @@ class Jobs():
     open_jobs = []
     closed_jobs = []
 
-    def __init__(self, address, due):
+    def __init__(self, address, due, price=0):
         self.address = address
         Jobs.open_jobs.append(self)
         self.due = due   # Due date
+        self.price = float(price)
         self.phase = {}
     def __str__(self):
         return self.address

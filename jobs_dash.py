@@ -33,10 +33,10 @@ fake_street4.add_phase('Shower / Backsplash Tile', 'Master Stonework')
 # Testing method for printing jobs, due date and phases
 def showOpenJobs():
 	print('\n')
-	print('The number of currently open jobs is: ', openJobCount(), '\n')
+	print('The number of currently open jobs is:', openJobCount(), '\n')
 
 	for job in jobs.Jobs.open_jobs:
-		print(job.address + ' is due on ' + job.due)
+		print(job.address + ' is due on ', job.due, '(${})'.format(job.price) )
 		for i in job.phase:
 			print(' - ', i, ': ', job.phase[i])
 		print('\n')
