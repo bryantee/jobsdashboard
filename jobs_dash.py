@@ -41,6 +41,13 @@ def showOpenJobs():
 			print(' - ', i, ': ', job.phase[i])
 		print('\n')
 
+# Show closed jobs (like the opened jobs function)
+def showClosedJobs():
+	print('\n')
+	print('The number of currently closed jobs is: ', closedJobCount())
+	for job in jobs.Jobs.closed_jobs:
+		print(job)
+
 # test out showing number of open jobs
 def openJobCount():
 	return len(jobs.Jobs.open_jobs)
